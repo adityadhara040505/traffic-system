@@ -6,20 +6,28 @@ GPIO_CONFIG = {
 }
 
 TIMING = {
-    'green_time': 15,
+    'min_green_time': 15,       # Minimum green time (seconds)
+    'max_green_time': 120,      # Maximum green time (seconds)
     'yellow_time': 3,
     'all_red_time': 2,
-    'emergency_blink_duration': 10
+    'emergency_blink_duration': 10,
+    'vehicle_count_interval': 5  # How often to count vehicles (seconds)
 }
 
 YOLO_CONFIG = {
     'model_path': 'assets/yolov8n.pt',
-    'emergency_classes': ['ambulance', 'firetruck', 'police'],
-    'conf_threshold': 0.5,
-    'img_size': 320
+    'vehicle_classes': ['car', 'truck', 'bus', 'motorcycle', 'van', 'trailer'],
+    'emergency_classes': ['ambulance', 'fire truck', 'police car'],
+    'conf_threshold': 0.65,
+    'img_size': 416,
+    'iou_threshold': 0.45
 }
 
 CAMERA_CONFIG = {
-    'source': 0,
-    'frame_skip': 5
+    'north': {'source': 'http://192.168.28.170:4747/video'},
+    'east': {'source': 'http://192.168.28.170:4747/video'},
+    'south': {'source': 'http://192.168.28.170:4747/video'},
+    'west': {'source': 'http://192.168.28.170:4747/video'},
+    'frame_skip': 20,
+    'resolution': (640, 480)
 }
