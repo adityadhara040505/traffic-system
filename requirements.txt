@@ -1,0 +1,4 @@
+opencv-python>=4.5.5.64
+ultralytics>=8.0.0
+numpy>=1.22.0
+gpiozero>=1.6.2
