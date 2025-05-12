@@ -1,9 +1,27 @@
 GPIO_CONFIG = {
-    'north': {'red': 17, 'yellow': 27, 'green': 22},
-    'east': {'red': 5, 'yellow': 6, 'green': 13},
-    'south': {'red': 26, 'yellow': 16, 'green': 20},
-    'west': {'red': 12, 'yellow': 25, 'green': 8}
+    'north': {
+        'red': 17,     # Physical Pin 11 (GPIO 17)
+        'yellow': 27,   # Physical Pin 13 (GPIO 27)
+        'green': 22     # Physical Pin 15 (GPIO 22)
+    },
+    'east': {
+        'red': 19,     # Physical Pin 35 (GPIO 19)
+        'yellow': 26,   # Physical Pin 37 (GPIO 26)
+        'green': 21     # Physical Pin 40 (GPIO 21)
+    },
+    'south': {
+        'red': 5,       # Physical Pin 29 (GPIO 5)
+        'yellow': 6,    # Physical Pin 31 (GPIO 6)
+        'green': 13      # Physical Pin 33 (GPIO 13)
+    },
+    'west': {
+        'red': 20,      # Physical Pin 38 (GPIO 20)
+        'yellow': 16,    # Physical Pin 36 (GPIO 16)
+        'green': 12      # Physical Pin 32 (GPIO 12)
+    }
 }
+
+PIN_NUMBERING = 'BCM'
 
 TIMING = {
     'min_green_time': 15,       # Minimum green time (seconds)
@@ -24,10 +42,10 @@ YOLO_CONFIG = {
 }
 
 CAMERA_CONFIG = {
-    'north': {'source': 'http://192.168.28.170:4747/video'},
-    'east': {'source': 'http://192.168.28.170:4747/video'},
-    'south': {'source': 'http://192.168.28.170:4747/video'},
-    'west': {'source': 'http://192.168.28.170:4747/video'},
+    'north': {'source': 'http://192.168.32.56:4747/video'},
+    'east': {'source': 'http://192.168.32.252:4747/video'},
+    'south': {'source': 'http://192.168.32.83:4747/video'},
+    'west': {'source': 'http://192.168.32.23:4747/video'},
     'frame_skip': 20,
     'resolution': (640, 480)
 }
